@@ -1,0 +1,10 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<table>
+	<th>item</th><th>description </th><th>delivery</th><th>numberofitem</th><th>damagegoods</th>
+	<th>deliveryofficer </th><th>receivingoffice</th><th>expirinv_orderydate </th><th>delete</th>
+		{%for objpurchase in objpurchase%}
+		<tr><td>{{objpurchase.item }}</td><td>{{objpurchase.description }}</td><td>{{objpurchase.delivery }}</td><td>{{objpurchase.numberofitem }}</td><td>{{objpurchase.damagegoods }}</td><td>{{objpurchase.deliveryofficer }}</td><td>{{objpurchase.receiving }}</td><td>{{objpurchase.expirinv_orderydate}}</td><td><a href="deletepurchase/{{objpurchase.id}}/delete">delete</a></td></tr>
+		{%endfor%}
+</table>
+{%endblock%}

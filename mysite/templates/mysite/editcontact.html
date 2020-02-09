@@ -1,0 +1,14 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<p>please update your contact details </p>
+<center>
+	<table width="300" border="2">
+	<th>full name</th>update<th>update</th><th>delete</th>
+	{% for edit in edit  %}
+	
+	<tr><td>{{edit}}</td><td><button width= 20  ><a href="updatecontact/{{edit.id}} ">update</a></button></td>
+	<td><button><a href="deletecontact/{{edit.id}}/delete/">delete</a></button></td></tr>
+	{% endfor %}
+	</table>
+</center>	
+{%endblock content%}

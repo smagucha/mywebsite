@@ -1,0 +1,9 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+are you sure you want to delete
+<form method="Post" action="">
+	{%csrf_token%}
+	{{delobj}}
+	<input type="submit"  value="delete">
+</form>
+{%endblock%}

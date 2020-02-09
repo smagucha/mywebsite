@@ -1,0 +1,12 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<table>
+	
+	<form method="POST" action="">
+		{%csrf_token%}
+		<tr><td>{{del_id.item}}</td>
+		<td><input type="submit" value="submit"></td></tr>
+	</form>
+	
+</table>
+{%endblock%}

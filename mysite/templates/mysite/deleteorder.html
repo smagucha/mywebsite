@@ -1,0 +1,9 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<form method="POST" action="">
+	<table>
+	{%csrf_token%}
+	<tr><td>{{delobj.Orderper}}</td><td>{{delobj.dateorder}}</td><td>{{delobj.expecteddatedelivery}}</td><td>{{delobj.deliveryofficer}}</td><td>{{delobj.invoiceNo}}</td><td>{{delobj.receipt}}</td><td><input type="submit" value="submit"></td></tr>
+	</table>
+</form>
+{%endblock%}

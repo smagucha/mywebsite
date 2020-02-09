@@ -1,0 +1,9 @@
+{% extends "mysite/base.html" %}
+{%load static%}
+{% block title %}Edit your profile {% endblock %}
+
+{% block content %}
+    <p>you can also update or change your password <a href="{%url 'password_change'%}">change password</a></p>
+    {%include 'mysite/form.html'%}
+{% endblock %}
+

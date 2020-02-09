@@ -1,0 +1,8 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+	<form method="POST"  action = "">
+		{% csrf_token %}
+	<p>Are you sure you want to delete contact for "{{ object.firstname }}{{" "}}{{object.lastname }}"?</p>
+	<input type="submit" value="Confirm">
+	</form>
+{%endblock%}

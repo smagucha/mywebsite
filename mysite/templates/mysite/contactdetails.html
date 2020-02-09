@@ -1,0 +1,30 @@
+{%extends 'mysite/base.html'%}
+{%load static %}
+{%block content%}
+<link href="{% static 'mysite/css/table.css'%}" rel="stylesheet">
+	<p>this is the contact details</p>
+	
+	<center>
+	<table>		
+			<th>number</th><th>firstname</th><th>surname</th><th>lastname</th>
+			<th>city</th><th>phonenumber</th><th>country</th>
+		{% for Mydatabase in Mydatabase  %}
+		<tr>
+			<td>{{forloop.counter}}</td><td>{{Mydatabase.firstname}}</td><td>{{Mydatabase.surname}}</td><td>{{Mydatabase.lastname}}</td>
+			<td>{{Mydatabase.phonenumber}}</td><td>{{Mydatabase.city}}</td><td>{{Mydatabase.country}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% for Mydatabase in object_list  %}
+	<!--<table>
+		<tr><td>firstname:</td><td>{{Mydatabase.firstname}}</td></tr>
+		<tr><td>surname:</td><td>{{Mydatabase.surname}}</td></tr>
+		<tr><td>lastname:</td><td>{{Mydatabase.lastname}}</td></tr>
+		<tr><td>city:</td><td>{{Mydatabase.city}}</td></tr>
+		<tr><td>phonenumber: </td><td>{{Mydatabase.phonenumber}}</td></tr>
+		<tr><td>country:</td><td>{{Mydatabase.country}}</td></tr>
+	</table>
+	<p>---------------------------------------------------</p>
+</center>-->	
+	#{% endfor %}
+{%endblock content%}

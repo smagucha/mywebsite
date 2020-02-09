@@ -1,0 +1,9 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+{%for obj in obj%}
+	this is sales:{{obj.numberofitem }}<br>
+{%endfor%}
+{%for salesob in  salesob %}
+	this is stock: {{salesob.numberofitem  }}	<br>
+{%endfor%}
+{%endblock%}

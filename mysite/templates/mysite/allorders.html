@@ -1,0 +1,11 @@
+{% extends 'mysite/base.html' %}
+{%load static %}
+
+{%block content%}
+<center>
+<p>all the orders in the warehouse</p>
+	{% for obj in obj  %}
+	<ul>	{{obj}}</ul>
+	{% endfor %}
+</center>	
+{%endblock content%}

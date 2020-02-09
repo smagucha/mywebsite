@@ -1,0 +1,11 @@
+{%extends 'mysite/base.html'%}
+
+{%load static%}
+{%block content%}
+<link href="{% static 'mysite/css/form.css'%}" rel="stylesheet">
+<form method="POST" action="">
+		{% csrf_token %}
+		{{updateformevnt.as_p}}
+		<input type="submit" name="submit" value="submit">
+	</form>
+{%endblock%}

@@ -1,0 +1,13 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+	<form method="POST"  action = "">
+		{% csrf_token %}
+	<p>Are you sure you want to delete contact for </p>
+	<table border='2'>
+		<tr><th>title</th><th>text</th></tr>
+		<tr><td>{{ object.title }}</td><td>{{object.text }}</td></tr>
+	</table>
+	?
+	<input type="submit" value="Confirm">
+	</form>
+{%endblock%}
