@@ -1,0 +1,15 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<br>
+<a href="{%url 'sales'%}">add sales</a>
+vjbkj
+<table>
+	{%for obj in obj %}
+	<tr>
+		<td>{{obj.buyer}}</td>
+		<td><a href="{% url 'updatesales' obj.id %}">update sales</a></td>
+		<td><a href="{%url 'deletesales' obj.id %}">delete</a></td>
+	</tr>
+	{%endfor %}
+</table>
+{%endblock%}

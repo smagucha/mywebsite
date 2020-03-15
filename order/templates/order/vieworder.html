@@ -1,0 +1,24 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<a href="{%url 'orderus_view'%}">add order</a>
+<table>
+	<th>Orderper</th>
+	<th>dateorder</th>
+	<th>expecteddatedelivery</th>
+	<th>deliveryofficer</th>
+	<th>invoiceNo</th>
+	<th>receipt </th>
+	<th>delete</th>
+	{%for objorder in objorder%}
+		<tr>
+			<td>{{objorder.Orderper}}</td>
+			<td>{{objorder.dateorder}}</td>
+			<td>{{objorder.expecteddatedelivery}}</td>
+			<td>{{objorder.deliveryofficer}}</td>
+			<td>{{objorder.invoiceNo}}</td>
+			<td>{{objorder.receipt}}</td>
+			<td><a href="deleteorder/{{objorder.id}}/delete">delete</a></td>
+		</tr>
+	{%endfor%}
+</table>
+{%endblock%}

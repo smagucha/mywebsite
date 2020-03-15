@@ -1,5 +1,7 @@
 {%extends 'mysite/base.html'%}
 {%load static%}
 {%block content%}
-{%include 'mysite/form.html'%}
+ 	{% if user.is_authenticated %}
+		{%include 'mysite/form.html'%}
+	{%endif%}
 {%endblock content%}

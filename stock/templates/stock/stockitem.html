@@ -1,0 +1,16 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+<center>
+	<br>
+	<a href="{%url 'stock_view'%}"> view stock</a>
+		<table>
+			<th>qualityofitem</th><th>numberofitem</th><th>expirydate</th><th>officer</th><th>delete</th>
+			{% for object in object %}
+				<tr><td>{{object.qualityofitem}} </td><td>{{object.numberofitem}} </td>
+				<td>{{object.expirydate}} </td><td>{{object.officer}} </td>
+				<td><a href="deletestock/{{ object.id }}/delete">delete</a></td>
+			</tr>
+			{%endfor%}
+		</table>
+</center>
+{%endblock%}

@@ -1,0 +1,10 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+	<br>
+	<br>
+	<form method = "POST" action = "">
+		{% csrf_token %}
+		{{objectstock.qualityofitem}}
+	<input type="submit" value="Confirm">
+	</form>	
+{%endblock%}
