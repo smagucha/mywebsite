@@ -1,5 +1,7 @@
 {%extends 'mysite/base.html'%}
 {%block content%}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
 <table>
 	<th>item</th><th>description </th><th>delivery</th><th>numberofitem</th><th>damagegoods</th>
 	<th>deliveryofficer </th><th>receivingoffice</th><th>expirinv_orderydate </th><th>delete</th>
@@ -13,7 +15,7 @@
 			<td>{{objpurchase.deliveryofficer }}</td>
 			<td>{{objpurchase.receiving }}</td>
 			<td>{{objpurchase.expirinv_orderydate}}</td>
-			<td><a href="{% url 'deleteincomingpurchase' objpurchase.id %}">delete</a></td>
+			<td><a href="{% url 'deleteincomingpurchase' objpurchase.id %}" class="w3-button w3-red">delete</a></td>
 		</tr>
 		{%endfor%}
 </table>

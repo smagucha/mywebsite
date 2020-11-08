@@ -1,0 +1,9 @@
+{%extends 'mysite/base.html'%}
+{%block content%}
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+	<a href="{% url 'stockitem' %}" class="w3-button w3-green">view stock </a>
+	<a href="{% url 'addproduct' %}" class="w3-button w3-green"> add product </a>
+	<a href="{% url 'addcatergory' %}"class="w3-button w3-green" >add catergory </a>
+{%include 'mysite/form.html'%}
+{%endblock content%}

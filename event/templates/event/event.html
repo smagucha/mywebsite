@@ -1,16 +1,20 @@
 {%extends 'mysite/base.html'%}
 {%block content%}	
 {%load static%}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--<a href="#" class="w3-button w3-green">Link Button</a>-->
 <link href="{% static 'mysite/css/table.css'%}" rel="stylesheet">
-<a href="{% url 'addevent' %}" >add event</a>
+<a href="{% url 'addevent' %}" class="w3-button w3-green">add event</a>
+<p>
 	<table >
 		<th>decription</th><th>message</th><th>update</th><th>delete</th>
 		{% for eventobj in eventobj  %}
 		<tr>
 			<td>{{eventobj.description}}</td><td>{{eventobj.message}}</td>
-			<td><a href="{% url 'updateevnt' eventobj.id %}">update</a></td>
-			<td><a href="{% url 'deleteevent' eventobj.id %}">delete</a></td>
+			<td><a href="{% url 'updateevnt' eventobj.id %}" class="w3-button w3-grey">update</a></td>
+			<td><a href="{% url 'deleteevent' eventobj.id %}" class="w3-button w3-red">delete</a></td>
 		</tr>
 		{%endfor%}
 	</table>	
+</p>
 {%endblock content%}

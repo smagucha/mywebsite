@@ -1,6 +1,8 @@
 {%extends 'mysite/base.html'%}
 {%block content%}
-<a href="{%url 'orderus_view'%}">add order</a>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+<a href="{%url 'orderus_view'%}" class="w3-button w3-green">add order</a>
 <table>
 	<th>Orderper</th>
 	<th>dateorder</th>
@@ -17,7 +19,7 @@
 			<td>{{objorder.deliveryofficer}}</td>
 			<td>{{objorder.invoiceNo}}</td>
 			<td>{{objorder.receipt}}</td>
-			<td><a href="deleteorder/{{objorder.id}}/delete">delete</a></td>
+			<td><a href="deleteorder/{{objorder.id}}/delete" class="w3-button w3-red" >delete</a></td>
 		</tr>
 	{%endfor%}
 </table>

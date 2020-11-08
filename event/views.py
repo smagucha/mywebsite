@@ -29,7 +29,7 @@ def addevent(request):
             return HttpResponseRedirect('addevent')
         else:
             form = myevent()
-        return render(request, 'mysite/addevent.html', {'form': form})
+        return render(request, 'event/addevent.html', {'form': form})
     else:
         return HttpResponseRedirect('login')
 

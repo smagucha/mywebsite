@@ -1,0 +1,12 @@
+class credit (models.Model):
+customer_name = models.CharField(max_length = 100)
+product_name = models.CharField(max_length= 100)
+product_quantity = models.IntegerField(defualt=1)
+price = models.IntegerField(default = 0)
+
+How I can calculate the price based of quantity automatically, supposed I select 2 quantity of any product and the price automatically gave me the calculation of 2. How can I achieve that. And sorry for my english
+
+
+from django.db.models import F
+
+Credit.objects.annotate(total_price=F('price') * F('product_quantity'))

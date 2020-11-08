@@ -1,5 +1,5 @@
 from django.db import models
-
+from sales.models import sale
 
 class order(models.Model):
     Orderper = models.CharField(max_length=30)

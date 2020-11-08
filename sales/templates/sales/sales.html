@@ -1,6 +1,8 @@
 {%extends 'mysite/base.html'%}
 {%load static%}
 {%block content%}
-	<a href="{%url 'sales_view'%}" >view sale </a>
-	{%include 'mysite/form.html'%}
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+	<a href="{%url 'sales_view'%}" class="w3-button w3-green" >view sale </a>
+	{%include 'mysite/form.html'%}	
 {%endblock content%}

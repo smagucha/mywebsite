@@ -1,5 +1,7 @@
 {%extends 'mysite/base.html'%}
 {%block content%}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
 <p>please update your contact details </p>
 <center>
 	<table width="300" border="2">
@@ -8,8 +10,8 @@
 	{% for edit in edit  %}
 		<tr>
 			<td>{{edit}}</td>
-			<td><button width= 20  ><a href="{{ edit.get_absolute_url}} ">update</a></button></td>
-			<td><button><a href="{% url 'deletecontact' edit.id  %}">delete</a></button></td>
+			<td><a href="{{ edit.get_absolute_url}} " class="w3-button w3-grey">update</a></td>
+			<td><a href="{% url 'deletecontact' edit.id  %}" class="w3-button w3-red">delete</a></td>
 		</tr>
 		{% endfor %}
 	</table>

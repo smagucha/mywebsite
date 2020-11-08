@@ -1,13 +1,15 @@
 {% extends 'mysite/base.html' %}
 {%load static%}
 {%block content%}
-<a href="{%url 'new_post'%}">new post</a>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+<a href="{%url 'new_post'%}" class="w3-button w3-green">new post</a>
 <table >
 	<tr><td>title</td><td>text</td><td>delete</td></tr>
 	{%for object in object%}
 	<tr>
 		<td>{{object.title}}</td><td>{{object.text}}</td>
-		<td><a class ="anchorbar" href="{% url 'deletepost' object.id  %}">delete</a></td>
+		<td><a href="{% url 'deletepost' object.id  %}" class="w3-button w3-red">delete</a></td>
 	</tr>
 	{%endfor%}
 </table>

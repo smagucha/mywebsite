@@ -1,14 +1,22 @@
 {%extends 'mysite/base.html'%}
 {%block content%}
 <br>
-<a href="{%url 'sales'%}">add sales</a>
-vjbkj
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+<a href="{%url 'sales'%}" class="w3-button w3-green">add sales</a>
 <table>
+	<tr><th>buyer</th><th>item</th><th>phone</th>
+		<th>email</th><th>quantity</th><th>update</th><th>delete</th>
+	</tr>
 	{%for obj in obj %}
 	<tr>
 		<td>{{obj.buyer}}</td>
-		<td><a href="{% url 'updatesales' obj.id %}">update sales</a></td>
-		<td><a href="{%url 'deletesales' obj.id %}">delete</a></td>
+		<td>{{obj.item}}</td>
+		<td>{{obj.phone}}</td>
+		<td>{{obj.email}}</td>
+		<td>{{obj.quantity}}</td>
+		<td><a href="{% url 'updatesales' obj.id %}" class="w3-button w3-grey">update sales</a></td>
+		<td><a href="{%url 'deletesales' obj.id %}" class="w3-button w3-red">delete</a></td>
 	</tr>
 	{%endfor %}
 </table>

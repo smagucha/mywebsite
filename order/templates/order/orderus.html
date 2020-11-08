@@ -1,6 +1,8 @@
 {%extends 'mysite/base.html'%}
 {%load static%}
 {%block content%}
-	<a href="{%url 'vieworder'%}" >view order </a>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+	<a href="{%url 'vieworder'%}" class="w3-button w3-green">view order </a>
 	{%include 'mysite/form.html'%}
 {%endblock content%}

@@ -2,15 +2,23 @@
 {%block content%}
 <center>
 	<br>
-	<a href="{%url 'stock_view'%}"> view stock</a>
-		<table>
-			<th>qualityofitem</th><th>numberofitem</th><th>expirydate</th><th>officer</th><th>delete</th>
-			{% for object in object %}
-				<tr><td>{{object.qualityofitem}} </td><td>{{object.numberofitem}} </td>
-				<td>{{object.expirydate}} </td><td>{{object.officer}} </td>
-				<td><a href="deletestock/{{ object.id }}/delete">delete</a></td>
-			</tr>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <!--<a href="#" class="w3-button w3-green">Link Button</a>-->
+	<a href="{%url 'stock_view'%}" class="w3-button w3-green"> view stock</a>
+		<p></p><table>
+			<th>NO</th><th>NAME</th><th>DESCRIPTION</th><th>STORAGE ALLOCATION </th><th>STOCK</th><th>UPDATE</th><th>DELETE</th>
+			{% for ob in object1 %}
+				<tr>
+					<td>{{ forloop.counter }}</td>
+					<td>{{ob.name}}</td>
+					<td>{{ob.description}}</td>
+					<td>{{ob.storelocation}}</td>
+					<td>{{ob.numberofitem}}</td>
+					<td><a href="updatestock/{{ob.id}}/update" class="w3-button w3-grey">update</a></td>
+					<td><a href="deletestock/{{ob.id}}/delete" class="w3-button w3-red">delete</a></td>
+				</tr>
 			{%endfor%}
+			
 		</table>
 </center>
 {%endblock%}
